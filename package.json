@@ -1,0 +1,26 @@
+{
+  "name": "webdash-readme-preview",
+  "version": "0.0.1",
+  "description": "Preview your readme.md in webdash",
+  "main": "api.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "webdash-readme-preview"
+  },
+  "keywords": [
+    "webdash",
+    "webdash-plugin",
+    "readme.md"
+  ],
+  "author": "Jad Joubran",
+  "license": "MIT",
+  "dependencies": {
+    "showdown": "^1.8.6"
+  }
+}

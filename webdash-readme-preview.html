@@ -1,0 +1,113 @@
+<link rel="import" href="/bower_components/polymer/polymer-element.html">
+<link rel="import" href="/bower_components/paper-spinner/paper-spinner.html">
+
+<dom-module id="webdash-readme-preview">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+
+      #preview {
+        padding: 0 20px;
+      }
+
+      #preview img {
+        max-width: 100%;
+      }
+
+      #preview a {
+        color: var(--brand);
+      }
+
+      #preview a:hover {
+        color: var(--accent);
+      }
+
+      #empty-state {
+        text-align: center;
+        padding: 20px 40px;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.8;
+      }
+
+      #empty-state h4 {
+        margin-bottom: 0;
+      }
+
+      #empty-state p {
+        margin-top: 10px;
+        opacity: 0.7;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      #spinner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #spinner paper-spinner[active]{
+        margin-top: 50px;
+      }
+    </style>
+
+    <template is="dom-if" if="{{emptyState}}">
+      <div id="empty-state">
+        <h4>No README.md found</h4>
+        <p>
+          Add a
+          <strong>README.md</strong> file at the root of your project to start using this plugin.
+        </p>
+      </div>
+    </template>
+    <div id="preview">
+    </div>
+    <div id="spinner">
+      <paper-spinner active$="{{loading}}"></paper-spinner>
+    </div>
+
+  </template>
+
+  <script>
+    class WebdashReadmePreview extends Polymer.Element {
+      static get is() { return 'webdash-readme-preview'; }
+
+      constructor() {
+        super();
+        this.loading = true;
+        this.emptyState = false;
+      }
+
+      ready() {
+        super.ready();
+        this.backend = new Backend(WebdashReadmePreview.is);
+        this.getManifest();
+      }
+
+      getManifest() {
+        this.backend.get('readme-html').then(data => {
+          if (!data || !data.result || !data.result.html) {
+            this.emptyState = true;
+            return false;
+          }
+
+          const html = data.result.html;
+          this.$.preview.innerHTML = html;
+        })
+          .catch(error => {
+            console.log('there was an error', error);
+          })
+          .finally(() => {
+            this.loading = false;
+          });
+      }
+    }
+
+    window.customElements.define(WebdashReadmePreview.is, WebdashReadmePreview);
+  </script>
+</dom-module>
