@@ -1,7 +1,7 @@
 {
   "name": "webdash-readme-preview",
   "version": "1.0.0",
-  "description": "Preview your readme.md in webdash",
+  "description": "Preview your README.md straight from the dashboard",
   "main": "api.js",
   "directories": {
     "test": "test"
@@ -33,5 +33,5 @@
   "bugs": {
     "url": "https://github.com/jadjoubran/webdash-readme-preview/issues"
   },
-  "homepage": "https://github.com/jadjoubran/webdash-readme-preview#readme",
+  "homepage": "https://github.com/jadjoubran/webdash-readme-preview#readme"
 }
