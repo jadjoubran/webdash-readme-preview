@@ -1,6 +1,6 @@
 {
   "name": "webdash-readme-preview",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Preview your README.md straight from the dashboard",
   "main": "api.js",
   "directories": {
@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-   "repository": {
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/jadjoubran/webdash-readme-preview.git"
   },
