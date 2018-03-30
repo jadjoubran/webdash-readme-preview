@@ -1,21 +1,20 @@
-# \<webdash-readme-preview\>
+# Webdash Readme Preview
 
-Preview your readme.md
+Preview your README.md file straight from the dashboard for a seamless experience.
 
-## Install the Polymer-CLI
-
-First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) installed. Then run `polymer serve` to serve your element locally.
-
-## Viewing Your Element
-
-```
-$ polymer serve
+```bash
+npm install --save-dev webdash-readme-preview
 ```
 
-## Running Tests
+![NPM readme preview](https://i.imgur.com/XFr31xS.png)
 
-```
-$ polymer test
-```
 
-Your application is already set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester). Run `polymer test` to run your application's test suite locally.
+## Features
+
+* Converts README.md to HTML preview
+* Supports Github flavored markdown
+
+
+## Enjoying webdash?
+
+Say Hi on Twitter: [@JoubranJad](https://twitter.com/JoubranJad)
