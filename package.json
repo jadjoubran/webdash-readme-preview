@@ -9,18 +9,29 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
+   "repository": {
     "type": "git",
-    "url": "webdash-readme-preview"
+    "url": "git+https://github.com/jadjoubran/webdash-readme-preview.git"
   },
   "keywords": [
     "webdash",
     "webdash-plugin",
     "readme.md"
   ],
+  "files": [
+    "bower_components/",
+    "*.js",
+    "*.html",
+    "*.md",
+    "*.json"
+  ],
   "author": "Jad Joubran",
   "license": "MIT",
   "dependencies": {
     "showdown": "^1.8.6"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/jadjoubran/webdash-readme-preview/issues"
+  },
+  "homepage": "https://github.com/jadjoubran/webdash-readme-preview#readme",
 }
