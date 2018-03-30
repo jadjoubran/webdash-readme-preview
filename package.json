@@ -1,6 +1,6 @@
 {
   "name": "webdash-readme-preview",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Preview your README.md straight from the dashboard",
   "main": "api.js",
   "directories": {
