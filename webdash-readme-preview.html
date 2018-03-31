@@ -1,5 +1,6 @@
 <link rel="import" href="/bower_components/polymer/polymer-element.html">
 <link rel="import" href="/bower_components/paper-spinner/paper-spinner.html">
+<link rel="import" href="/bower_components/empty-state-webdash/empty-state-webdash.html">
 
 <dom-module id="webdash-readme-preview">
   <template>
@@ -31,24 +32,6 @@
         color: var(--accent);
       }
 
-      #empty-state {
-        text-align: center;
-        padding: 20px 40px;
-        max-width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-        line-height: 1.8;
-      }
-
-      #empty-state h4 {
-        margin-bottom: 0;
-      }
-
-      #empty-state p {
-        margin-top: 10px;
-        opacity: 0.7;
-      }
-
       a {
         color: inherit;
       }
@@ -64,13 +47,10 @@
     </style>
 
     <template is="dom-if" if="{{emptyState}}">
-      <div id="empty-state">
-        <h4>No README.md found</h4>
-        <p>
+      <empty-state-webdash title="No README.md found">
           Add a
           <strong>README.md</strong> file at the root of your project to start using this plugin.
-        </p>
-      </div>
+      </empty-state-webdash>
     </template>
     <div id="preview">
     </div>

@@ -4,7 +4,8 @@
   "main": "webdash-readme-preview.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^2.0.0",
-    "paper-spinner": "PolymerElements/paper-spinner#^2.1.0"
+    "paper-spinner": "PolymerElements/paper-spinner#^2.1.0",
+    "empty-state-webdash": "jadjoubran/empty-state-webdash#^1.0.4"
   },
   "devDependencies": {
     "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",
