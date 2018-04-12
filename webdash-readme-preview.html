@@ -4,6 +4,7 @@
 
 <dom-module id="webdash-readme-preview">
   <template>
+    <link rel="stylesheet" href="/bower_components/highlight-js/src/styles/solarized-dark.css">
     <style>
       :host {
         display: block;
@@ -24,6 +25,12 @@
         word-break: keep-all;
       }
 
+      #preview pre {
+        background-color: #022B36;
+        padding: 20px;
+        border-radius: 5px;
+      }
+
       #preview a {
         color: var(--brand);
       }
@@ -41,15 +48,16 @@
         justify-content: center;
         align-items: center;
       }
-      #spinner paper-spinner[active]{
+
+      #spinner paper-spinner[active] {
         margin-top: 50px;
       }
     </style>
 
     <template is="dom-if" if="{{emptyState}}">
       <empty-state-webdash title="No README.md found">
-          Add a
-          <strong>README.md</strong> file at the root of your project to start using this plugin.
+        Add a
+        <strong>README.md</strong> file at the root of your project to start using this plugin.
       </empty-state-webdash>
     </template>
     <div id="preview">

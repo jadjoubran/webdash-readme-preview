@@ -1,8 +1,20 @@
 const fs = require("fs");
-const md = require("markdown-it")({
+const hljs = require("highlight.js");
+const MarkdownIt = require("markdown-it");
+
+const md = MarkdownIt({
   html: true,
   linkify: true,
-  typographer: true
+  typographer: true,
+  highlight: function(str, lang) {
+    if (lang && hljs.getLanguage(lang)) {
+      try {
+        return hljs.highlight(lang, str).value;
+      } catch (__) {}
+    }
+
+    return "";
+  }
 });
 
 module.exports = {
