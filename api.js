@@ -1,6 +1,9 @@
 const fs = require("fs");
-const showdown = require("showdown");
-const converter = new showdown.Converter();
+const md = require("markdown-it")({
+  html: true,
+  linkify: true,
+  typographer: true
+});
 
 module.exports = {
   routes: {
@@ -15,7 +18,7 @@ module.exports = {
         }
 
         const readmeMd = fs.readFileSync(path).toString();
-        let html = converter.makeHtml(readmeMd);
+        let html = md.render(readmeMd);
 
         //rewrite links to open in new tab
         html = html.replace(

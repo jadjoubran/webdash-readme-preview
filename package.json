@@ -28,7 +28,7 @@
   "author": "Jad Joubran",
   "license": "MIT",
   "dependencies": {
-    "showdown": "^1.8.6"
+    "markdown-it": "^8.4.1"
   },
   "bugs": {
     "url": "https://github.com/jadjoubran/webdash-readme-preview/issues"
